@@ -1,0 +1,62 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int m,i,a[20],k=0,c[100],flag;
+    cout<<"Enter the size of first arrey: "<<endl;
+    cin>>m;
+    cout<<"Enter the elements if 1st array: ";
+    for(i=0;i<m;i++)
+    {
+        cin>>a[i];
+    }
+    int n,j,b[20];
+    cout<<"Enter the size of 2nd array: "<<endl;
+    cin>>n;
+    cout<<"Enter the elements of 2nd array: ";
+    for(j=0;j<n;j++)
+    {
+        cin>>b[j];
+    }
+    cout<<"Intersection of two arrays: ";
+    for(i=0;i<m;i++)
+    {
+        for(j=0;j<n;j++)
+        {
+            if(a[i]==b[j])
+            {
+                cout<<a[i]<<"\t";
+            }
+        }
+    }
+  
+    cout<<"Union of two arrays: ";
+    for(i=0;i<m;i++)
+     {
+       c[k]=a[i];
+        k++;
+     }
+     for(i=0;i<n;i++)
+      {
+        flag=0;
+        for(j=0;j<m;j++)
+        {
+          if(b[i]==c[j])
+           {
+           flag=1;
+           break;
+           }
+       }
+       if(flag==0)
+         {
+           c[k]=b[i];
+            k++;
+         }
+      }
+      for(i=0;i<k;i++)
+      {
+     cout<<c[i];
+      }
+}
+
+
