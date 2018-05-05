@@ -1,0 +1,23 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,i,arr[20];
+    cout<<"enter the size of array: "<<endl;
+    cin>>n;
+    cout<<"enter the elements of array: "<<endl;
+    for(i=0;i<n;i++)
+    {
+        cin>>arr[i];
+    }
+    for(i=0;i<n;i++)
+    {
+        arr[i]=arr[i]+1;
+    }
+    cout<<"the incremented array: "<<endl;
+    for(i=0;i<n;i++)
+    {
+        cout<<arr[i]<<" ";
+    }
+    return 0;
+}
