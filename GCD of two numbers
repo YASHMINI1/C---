@@ -1,0 +1,21 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int m,n,i;
+    cout<<"enter the first number : ";
+    cin>>m;
+    cout<<"enter the second number : ";
+    cin>>n;
+    int mn=min(m,n);
+    int GCD=1;
+    for(i=1;i<=mn;i++)
+    {
+        if(m%i==0 && n%i==0)
+        {
+            GCD=max(GCD,i);
+        }
+    }
+    cout<<"Greatest common divisor is : "<<GCD;
+    return 0;
+}
