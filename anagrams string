@@ -1,0 +1,48 @@
+#include<iostream>
+#include<string>
+using namespace std;
+
+bool isanagram(string S1, string S2);
+
+int main()
+{
+    string S1,S2;
+    cout<<"enter the two strings: "<<endl;
+    cin>>S1>>S2;
+    cout<<S1<<" and "<<S2;
+
+    if(isanagram(S1,S2))
+    {
+        cout<<" are anagrams. "<<endl;
+    }
+    else
+    {
+        cout<<" are NOT anagrams. "<<endl;
+    }
+    return 0;
+}
+
+bool isanagram(string S1, string S2)
+{
+    char allchar[256]={0};
+    for(int i=0;i<S1.length();i++)
+    {
+        allchar[S1[i]]++;
+    }
+    for(int j=0;j<S2.length();j++)
+    {
+        allchar[S2[j]]--;
+    }
+    for(int k=0;k<256;k++)
+    {
+        if(allchar[k]!=0)
+            return false;
+        else
+            return true;
+    }
+
+}
+
+
+
+
